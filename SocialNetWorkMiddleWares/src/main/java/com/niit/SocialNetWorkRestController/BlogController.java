@@ -1,9 +1,5 @@
 package com.niit.SocialNetWorkRestController;
 
-
-
-
-
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -62,7 +58,7 @@ public class BlogController
 		}
 	}
 	
-	@GetMapping("/showAllBlogs")
+	@GetMapping("/ShowAllBlogs")
 	public ResponseEntity<List<Blog>> showAllBlog()
 	{
 		List<Blog> listAllBlogs=blogDAO.listAllBlogs();
@@ -81,9 +77,9 @@ public class BlogController
 	public ResponseEntity<String> addBlog(@RequestBody Blog blog,HttpSession session)
 	{
 		blog.setCreateDate(new java.util.Date());
-		//blog.setLikes(0);
+		blog.setLikes(0);
 		//blog.setLoginname(((UserDetail)session.getAttribute("userDetail")).getLoginname());
-		//blog.setStatus("NA");
+		blog.setStatus("NA");
 		
 		System.out.println("Blog Name:"+blog.getBlogName());
 		System.out.println("Blog Content:"+blog.getBlogContent());

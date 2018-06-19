@@ -35,7 +35,7 @@
 <groupId>com.niit</groupId>
   <artifactId>SocialNetWorkBackEnd</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>War</packaging>
+  
 </dependency>
 
 

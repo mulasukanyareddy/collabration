@@ -7,6 +7,7 @@
 <script src="c_user/UserController.js"></script>
 <script src="c_blog/BlogController.js"></script>
 <script src="c_forum/ForumController.js"></script>
+<script src="c_forum/ForumController.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -36,17 +37,24 @@
 				
 				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Blog<span class="caret"></span></a>
 					<ul class="dropdown-menu">
+							
+				
 						<li ng-hide="currentUser==undefined||currentUser.role=='ROLE_ADMIN'"><a href="#/blog">Add Blog</a></li>
-						<li><a href="#/showBlog">Show Blog</a>	
-						<li ng-hide="currentUser==undefined ||currentUser.role=='ROLE_USER'"><a href="#/AdminBlog">Admin Blog</a>
-						<li ng-hide="currentUser==undefined||currentUser.role=='ROLE_ADMIN'"><a href="#/myBlog">My Blog</a>				
+						<li><a href="#/showBlog">showBlog</a>	
+						<li ng-hide="currentUser==undefined ||currentUser.role=='ROLE_USER'"><a href="#/AdminBlog">AdminBlog</a>
+						<li ng-hide="currentUser==undefined||currentUser.role=='ROLE_ADMIN'"><a href="#/myBlog">myBlog</a>				
 					</ul>
 				</li>
+						
+	                
+				
+			
 				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Forum<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="#/AddForum">AddForum</a></li>
 						<li><a href="#/ShowForum">ShowForum</a></li>
 								<li><a href="#/AdminForum">AdminForum</a></li>
+						
 					</ul>
 				</li>
 				<li ng-nide ="currentUser"==undefined"><a href ="#/profilepicture">EDIT PROFILEPICTURE</a>
@@ -55,7 +63,7 @@
 					<ul class="dropdown-menu">
 						
 						<li><a href="#/ShowFriendList">ShowfriendList</a></li>
-						<li><a href="#//ShowpendingFriendList">/ShowpendingFriendList</a></li>
+						<li><a href="#/ShowpendingFriendList">ShowpendingFriendList</a></li>
 						<li><a href="#/ShowSuggestedFriendList">ShowSuggestedFriendList</a></li>
 					</ul>	
 							

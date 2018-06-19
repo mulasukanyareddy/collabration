@@ -33,13 +33,13 @@ public class UserDetailDAOTestCase
 	{
 		UserDetail userDetail=new UserDetail();
 		
-		userDetail.setLoginname("sukanya");
-		userDetail.setPassword("sukanya123");
-		userDetail.setUserName("sukanya");
-		userDetail.setEmailId("sukanya@gmail.com");
+		userDetail.setLoginname("reddy");
+		userDetail.setPassword("reddy123");
+		userDetail.setUserName("reddy");
+		userDetail.setEmailId("reddy@gmail.com");
 		userDetail.setAddress("india");
 		userDetail.setMobileNo("9492286794");
-		userDetail.setRole("ROLE_USER");
+		userDetail.setRole("ROLE_Admin");
 		
 		assertTrue("Problem in Registering User",userDetailDAO.registerUser(userDetail));
 	}

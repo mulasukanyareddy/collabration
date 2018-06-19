@@ -10,14 +10,14 @@ myApp.controller("BlogController",function($scope,$http,$rootScope,$location)
 	{
 		console.log('Adding Blog Information');
 		
-		$http.post('http://localhost:8097/SocialNetWorkMiddleWares/addBlog',$scope.blog)
+		$http.post('"http://localhost:8097/SocialNetWorkMiddleWares/addBlog',$scope.blog)
 		.then(function(response)
 		{
 			$location.path('/blog');
 		});
 	}
 	
-	$scope.blogComment(blogid)
+	$scope.blogComment=function(blogid)
 	{
 		$rootScope.blogid=blogid;
 		$location.path("/blogComment");
@@ -26,7 +26,7 @@ myApp.controller("BlogController",function($scope,$http,$rootScope,$location)
 	$scope.incLikes=function(blogid)
 	{
 		console.log('Incrment Likes');
-		$http.get('http://localhost:8097/SocialNetWorkMiddlewWares/incrementLike/'+blogid)
+		$http.get('http://localhost:8097/SocialNetWorkMiddleWares/incrementLike/'+blogid)
 		.then(function(response)
 				{
 				$location.path('/blog');
@@ -36,13 +36,13 @@ myApp.controller("BlogController",function($scope,$http,$rootScope,$location)
 	$scope.approve=function(blogid)
 	{
 		console.log('Approve the Blog');
-		$http.get('http://localhost:8097/SocialNetWorkMiddleWares/approveBlog/'+blogid)
+		$http.get('/'+blogid)
 	}
 		
 	$scope.reject=function(blogid)
 	{
 		console.log('Reject the Blog');
-		$http.get('http://localhost:8097/SocialNetWorkMiddleWares/rejectBlog/'+blogid)
+		$http.get('"http://localhost:8097/SocialNetWorkMiddleWares/rejectBlog/'+blogid)
 	}
 	
 	function listAllBlogs()
@@ -69,7 +69,7 @@ myApp.controller("BlogController",function($scope,$http,$rootScope,$location)
 	
 	$scope.deleteBlog=function(blogid)
 	{
-		$http.get('http://localhost:8097/SocialNetWorkMiddleWares/deleteBlog/'+blogid)
+		$http.get('"http://localhost:8097/SocialNetWorkMiddleWares/deleteBlog/'+blogid)
 		.then(function(response)
 				{
 				console.log(response.data);

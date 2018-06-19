@@ -8,14 +8,19 @@
 			{	
 				$scope.User.role='ROLE_USER';
 				
+				 alert("User Registered Successfully");
 				//http://localhost:8097/SocialNetWorkMiddleWares/
 				
 				$http.post('http://localhost:8097/SocialNetWorkMiddleWares/registerUser',$scope.User)
 				.then(function(response)
 						 {
-						 console.log('The user registered successfully');
-						 alert('User Registered Successfully');
+						// console.log('The user registered successfully');
+					//	 alert("User Registered Successfully");
 						 console.log(response.statusText);
+							$scope.User=response.data;
+							$rootScope.currentUser=$scope.User;
+							console.register($rootScope.User);
+							$location.path("/");
 						 });
 				
 			}
@@ -23,6 +28,7 @@
 			$scope.checklogin=function()
 			{
 				alert("Checking Login Process");
+				
 				
 				$http.post('http://localhost:8097/SocialNetWorkMiddleWares/checkLogin',$scope.User)
 				.then(function(response)

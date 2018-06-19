@@ -61,9 +61,9 @@ public class ForumController
 	public ResponseEntity<String> addForum(@RequestBody Forum forum)
 	{
 		forum.setCreateDate(new java.util.Date());
-		//forum.setLikes(0);
-		//forum.setLoginname("sukanya");
-		//forum.setStatus("NA");
+		forum.setLikes(0);
+		forum.setLoginname("sukanya");
+		forum.setStatus("NA");
 		
 		if(forumDAO.addForum(forum))
 		{

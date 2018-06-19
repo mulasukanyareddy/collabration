@@ -63,7 +63,7 @@ myApp.controller("FriendController",function($scope,$http,$rootScope,$location)
 	$scope. unfriend= function(friendId)
 	{
 		console.log('I am in unfriend method ');
-		$http.get('http://localhost8097/SocialNetWorkMiddleWare/deleteFriendRequest/'+friendId)
+		$http.get('http://localhost8098/SocialNetWorkMiddleWare/deleteFriendRequest/'+friendId)
 		.then(function(response)
 				{
 			console.log('Deleted');
